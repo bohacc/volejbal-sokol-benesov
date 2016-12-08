@@ -55,8 +55,6 @@ function ngApp(req, res) {
 }
 // Routes with html5pushstate
 // ensure routes match client-side-app
-app.get('/logout', api.logout);
-app.post('/login', api.login);
 
 app.get('/', ngApp);
 app.get('/homepage', ngApp);
