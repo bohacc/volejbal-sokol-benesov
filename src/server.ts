@@ -56,8 +56,9 @@ function ngApp(req, res) {
 // Routes with html5pushstate
 // ensure routes match client-side-app
 
-app.get('/', ngApp);
-app.get('/homepage', ngApp);
+app.get('*', ngApp);
+//app.get('/', ngApp);
+//app.get('/homepage', ngApp);
 
 app.get('*', function(req, res) {
   res.setHeader('Content-Type', 'application/json');

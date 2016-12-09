@@ -4,12 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { Home } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
+  //{ path: '', redirectTo: 'homepage', pathMatch: 'full' },
   {
-    path: 'homepage',
+    path: '',
     component: Home,
     data: {
-      title: 'Amed'
+      title: 'Volejbal Sokol Benešov'
     }
   },
 ];
