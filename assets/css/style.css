@@ -21,7 +21,7 @@
  3.6 Newsletter
  3.7 Contact
  3.8 Footer
-4 Responsive 
+4 Responsive
 **********************************************************************/
 
 /*
@@ -275,7 +275,7 @@ p {
     -ms-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-.thumbnail h3, 
+.thumbnail h3,
 .thumbnail p {
     margin:0;
     padding:0;
@@ -335,7 +335,7 @@ p {
     color:#181A1C;
 }
 /*
-3. Sections 
+3. Sections
 ***************************************************************************/
  .section {
     padding-bottom: 50px;
@@ -385,7 +385,7 @@ p {
 /* Third section use bacground image */
 .third-section {
     padding-bottom: 70px;
-    background: #181A1C url(../images/brand-bg.png) no-repeat center;
+    background: #181A1C url(../img/brand-bg.png) no-repeat center;
     border-top:6px solid #FECE1A;
 }
 .third-section .container {
@@ -403,7 +403,7 @@ p {
     padding:0;
 }
 /*******
-3.1 Services  
+3.1 Services
 ***************************************/
 .service{
     margin-top:20px;
@@ -596,7 +596,7 @@ p {
 .testimonial .whopic small {
     display:block;
     font-size:12px;
-    
+
 }
 .testimonial-text{
     display:block;
