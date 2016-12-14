@@ -29,13 +29,12 @@
 **********************************************************************/
  body {
     font-family:'Roboto', sans-serif;
-    color: #FFF;
+    color: #408AD2;
     line-height:1.2em;
     font-size:17px;
     line-height:20px;
 }
 a {
-    color:#181A1C;
     text-decoration: none;
 }
 a:hover {
@@ -51,7 +50,7 @@ h1 {
 p {
     padding: 10px;
     font-weight: 100;
-    color: #fff;
+    color: #408AD2;
 }
 .navbar {
     background: #181A1C;
@@ -86,12 +85,12 @@ p {
     box-shadow: none;
     font-size:15px;
     text-shadow: none;
-    color: #fff;
+    color: #408AD2;
     transition: border-color 1s ease;
 }
 .navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     border: 1px solid #FECE1A;
-    color: #fff;
+    color: #408AD2;
     background-color: #181A1C;
     transition: border-color 1s ease;
 }
@@ -110,7 +109,7 @@ p {
 }
 .nav-pills > li > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
     background: #181A1C;
-    color: #fff;
+    color: #408AD2;
 }
 .navbar .btn-navbar:hover, .navbar .btn-navbar {
     border-radius:0;
@@ -155,7 +154,7 @@ p {
     -moz-border-radius: 500px;
     border-radius: 500px;
     -khtml-border-radius: 500px;
-    border: 3px solid #fff;
+    border: 3px solid #408AD2;
 }
 .left-align {
     text-align:left;
@@ -215,7 +214,7 @@ p {
 }
 .button:hover, .button:active{
     background-color:#181A1C;
-    color:#fff;
+    color:#408AD2;
 }
 .button-sp, .button-sp:visited, .button-sp:focus {
     border:none;
@@ -261,7 +260,7 @@ p {
     width:80px;
     height:80px;
     font-size:40px;
-    color:#fff;
+    color:#408AD2;
     text-decoration:none;
     line-height: 70px;
     text-align: center;
@@ -355,7 +354,7 @@ p {
 }
 .section .title > p {
     font-size: 20px;
-    color: #FFF;
+    color: #408AD2;
     font-weight: lighter;
 }
 .primary-section {
@@ -365,13 +364,13 @@ p {
     border-top: 40px solid #FECE1A;
 }
 .primary-section .title {
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid #408AD2;
 }
 .primary-section, .primary-section .title p, .primary-section h3 {
     color: #FECE1A;
 }
 .primary-section h1 {
-    color:#FFF;
+    color:#408AD2;
 }
 .secondary-section {
     background:#FECE1A;
@@ -482,13 +481,13 @@ p {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #408AD2;
 }
 .team .thumbnail:hover .social {
     z-index: 5;
 }
 .team .thumbnail:hover .social a {
-    color:#fff;
+    color:#408AD2;
 }
 .team .thumbnail .mask {
     background: #FECE1A;
@@ -519,7 +518,7 @@ p {
 }
 .skills li {
     margin-bottom:30px;
-    background:#FFF;
+    background:#408AD2;
     height:40px;
     padding:1px;
 }
@@ -592,6 +591,8 @@ p {
     float:left;
     margin-top:10px;
     padding-left:10px;
+    padding-bottom:10px;
+    color: #408AD2;
 }
 .testimonial .whopic small {
     display:block;
@@ -682,7 +683,7 @@ p {
     margin: 0 0 0 20px;
 }
 .newsletter .button-sp:hover, .newsletter .button-sp:active {
-    background-color:#FFF;
+    background-color:#408AD2;
     color:#181A1C;
 }
 
@@ -704,7 +705,7 @@ p {
     height: 120px;
 }
 .contacts, .contact .social {
-    color: #fff;
+    color: #408AD2;
     list-style: none;
     margin-left: 10px;
 }
@@ -712,7 +713,7 @@ p {
     margin-top: 15px;
 }
 .contacts > li > a {
-    color: #fff;
+    color: #408AD2;
 }
 .contact-info {
     margin-top:10px;
@@ -753,13 +754,13 @@ p {
     -webkit-transition: margin 0.4s;
 }
 .contact .social li a {
-    color:#fff;
+    color:#408AD2;
 }
 .contact .social li a:hover {
     color:#181A1C;
 }
 .contact-form {
-    background:#fff;
+    background:#408AD2;
     background: rgba(255, 255, 255, 0.9);
     z-index:110;
     position:relative;
@@ -802,7 +803,7 @@ p {
     text-align: center;
 }
 .footer > p {
-    color: #fff;
+    color: #408AD2;
     margin:0;
 }
 
@@ -824,14 +825,14 @@ p {
     position:fixed;
     bottom:30px;
     right:20px;
-	border:1px solid #fff;
+	border:1px solid #408AD2;
     display:none;
     background: #FECE1A;
 }
 .scrollup > a {
     position:relative;
     top:7px;
-    color:#fff;
+    color:#408AD2;
 }
 /*
 4 Responsible
@@ -908,4 +909,5 @@ p {
 
 .logo {
     float: left;
+    color: #E3BB24;
 }
