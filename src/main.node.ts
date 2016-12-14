@@ -3,11 +3,11 @@ import { FormsModule } from '@angular/forms';
 
 import { UniversalModule } from 'angular2-universal';
 
-import { AlertModule, DatepickerModule, DropdownModule } from 'ng2-bootstrap/ng2-bootstrap';
-
 import { App } from './app/app';
 import { routing, appRoutingProviders } from './app/app.routing';
 import {Home} from "./app/home/home.component";
+import {Header} from "./app/header/header.component";
+import {Footer} from "./app/footer/footer.component";
 
 //noinspection TypeScriptUnresolvedVariable
 
@@ -15,15 +15,14 @@ import {Home} from "./app/home/home.component";
   bootstrap: [ App ],
   declarations: [
     App,
-    Home
+    Home,
+    Header,
+    Footer
   ],
   imports: [
     UniversalModule, // NodeModule, NodeHttpModule, and NodeJsonpModule are included
     FormsModule,
     routing,
-    AlertModule,
-    DatepickerModule,
-    DropdownModule
   ],
   providers: [
     appRoutingProviders,
