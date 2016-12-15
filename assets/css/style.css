@@ -44,7 +44,7 @@ a:hover {
 }
 
 .info-mail a:hover {
-  color: #181A1C;
+  color: #FECE1A;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -697,6 +697,7 @@ p {
 /*
 3.7 Contact
 ********************************************************************/
+/*
  .contact {
     background: #FECE1A;
 }
@@ -733,6 +734,7 @@ p {
     margin:10px auto;
     font-size:30px;
 }
+*/
 .map-wrapper {
     position:relative;
     height:500px;
@@ -793,11 +795,10 @@ p {
     font-size:22px;
 }
 .info-mail {
-    border:1px solid white;
+    border:1px solid #FECE1A;
     width:60%;
     margin:0 auto;
     padding:15px;
-    color:#181A1C;
 }
 .black {
     color:#181A1C;
@@ -926,4 +927,8 @@ p {
 
 .title2 {
   color: #181A1C;
+}
+
+.contact p {
+  color: #FECE1A;
 }
