@@ -14,6 +14,7 @@ import {MatchSchedule} from "./app/match-schedule/match-schedule.component";
 import {Statistics} from "./app/statistics/statistics.component";
 import {AboutUs} from "./app/about-us/about-us.component";
 import {Players} from "./app/players/players.component";
+import {Login} from "./app/login/login.component";
 
 @NgModule({
   bootstrap: [ App ],
@@ -27,7 +28,8 @@ import {Players} from "./app/players/players.component";
     MatchSchedule,
     Statistics,
     AboutUs,
-    Players
+    Players,
+    Login
   ],
   imports: [
     UniversalModule, // BrowserModule, HttpModule, and JsonpModule are included

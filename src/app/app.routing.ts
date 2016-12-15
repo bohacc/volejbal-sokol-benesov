@@ -8,6 +8,7 @@ import {MatchSchedule} from "./match-schedule/match-schedule.component";
 import {Matches} from "./matches/matches.component";
 import {Players} from "./players/players.component";
 import {Contact} from "./contact/contact.component";
+import {Login} from "./login/login.component";
 
 let title = 'Volejbal Sokol Benešov';
 
@@ -21,6 +22,8 @@ const appRoutes: Routes = [
   {path: 'match-schedule', component: MatchSchedule, data: {title: title}},
   {path: 'statistics', component: Statistics, data: {title: title}},
   {path: 'players', component: Players, data: {title: title}},
+  {path: 'login', component: Login, data: {title: title}},
+  {path: '*', component: Home, data: {title: title}},
 ];
 
 export const appRoutingProviders: any[] = [

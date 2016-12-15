@@ -36,11 +36,17 @@
 }
 a {
     text-decoration: none;
+    color: #408AD2;
 }
 a:hover {
     color: #FECE1A;
     text-decoration:none;
 }
+
+.info-mail a:hover {
+  color: #181A1C;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
@@ -593,6 +599,7 @@ p {
     padding-left:10px;
     padding-bottom:10px;
     color: #408AD2;
+    height: 35px;
 }
 .testimonial .whopic small {
     display:block;
@@ -910,4 +917,13 @@ p {
 .logo {
     float: left;
     color: #E3BB24;
+}
+
+.secondary-section .container small {
+  color: #181A1C;
+  float: right;
+}
+
+.title2 {
+  color: #181A1C;
 }
