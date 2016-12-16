@@ -39,7 +39,6 @@ app.use(api.sessionidCookie);
 
 // Serve static files
 app.use('/assets', express.static(path.join(__dirname, '../assets'), {maxAge: 30}));
-console.log(__dirname);
 app.use(express.static(path.join(ROOT, 'dist/client'), {index: false}));
 
 function ngApp(req, res) {
