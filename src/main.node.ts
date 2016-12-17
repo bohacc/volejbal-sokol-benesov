@@ -15,6 +15,7 @@ import {Statistics} from "./app/statistics/statistics.component";
 import {AboutUs} from "./app/about-us/about-us.component";
 import {Players} from "./app/players/players.component";
 import {Login} from "./app/login/login.component";
+import {CSlider} from "./app/cslider/cslider.component";
 
 //noinspection TypeScriptUnresolvedVariable
 
@@ -31,7 +32,8 @@ import {Login} from "./app/login/login.component";
     Statistics,
     AboutUs,
     Players,
-    Login
+    Login,
+    CSlider
   ],
   imports: [
     UniversalModule, // NodeModule, NodeHttpModule, and NodeJsonpModule are included

@@ -10,6 +10,10 @@ function root(args) {
 var commonConfig = {
   resolve: {
     extensions: ['.ts', '.js', '.json'],
+    alias: {
+      "jQuery": "jquery",
+      "jquery": "jquery",
+    }
   },
   module: {
     loaders: [
@@ -26,7 +30,14 @@ var commonConfig = {
       /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
       root('./src'),//root
       resolveNgRoute(root('./src')), //root
-    )
+    ),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jquery: "jQuery",
+      jQuery: "jquery",
+      "windows.jQuery": "jquery",
+      'window.$': 'jquery',
+    })
   ]
 
 };
