@@ -28,13 +28,9 @@ var commonConfig = {
     new webpack.ContextReplacementPlugin(
       // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
-      root('/usr/share/nginx/volejbal-sokol-benesov/'),//root
       root('/usr/share/nginx/volejbal-sokol-benesov/src/'),//root
-      root('./src/'),//root
-      root('./src/tools/'),//root
+      //root('./src/'),//root
       resolveNgRoute(root('./src')), //root
-      resolveNgRoute(root('./src/tools')), //root
-      resolveNgRoute(root('./src/tools/')), //root
     ),
     new webpack.ProvidePlugin({
       $: "jquery",
