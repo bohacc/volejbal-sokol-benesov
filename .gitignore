@@ -5,8 +5,6 @@
 /tsd_typings/
 npm-debug.log
 
-/dist/
-
 npm-debug.log
 mcled_website_v3_err.log
 mcled_website_v3_out.log
