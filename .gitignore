@@ -12,6 +12,8 @@ nohup.out
 
 .idea
 
+/dist/
+
 files/*
 .htaccess*
 

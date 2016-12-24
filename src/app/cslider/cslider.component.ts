@@ -11,9 +11,9 @@ export class CSlider {
 
   ngOnInit() {
     if (isBrowser) {
-      $(require('/usr/share/nginx/volejbal-sokol-benesov/src/tools/jquery'));
-      $(require('/usr/share/nginx/volejbal-sokol-benesov/src/tools/modernizr'));
-      $(require('/usr/share/nginx/volejbal-sokol-benesov/src/tools/jquery.cslider'));
+      $(require('../../../src/tools/jquery'));
+      $(require('../../../src/tools/modernizr'));
+      $(require('../../../src/tools/jquery.cslider'));
       $(this._elRef.nativeElement).cslider();
     }
   }
