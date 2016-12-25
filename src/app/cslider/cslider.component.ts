@@ -13,8 +13,8 @@ export class CSlider {
     if (isBrowser) {
       $(require('../../../src/tools/jquery'));
       $(require('../../../src/tools/modernizr'));
-      /*$(require('../../../src/tools/jquery.cslider'));
-      $(this._elRef.nativeElement).cslider();*/
+      $(require('../../../src/tools/jquery.cslider'));
+      //$(this._elRef.nativeElement).cslider();
     }
   }
 }
