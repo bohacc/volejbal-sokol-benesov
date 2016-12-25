@@ -24,7 +24,7 @@ var commonConfig = {
       { test: /\.json$/, loader: 'raw-loader' },
     ],
   },
-  plugins: [
+  /*plugins: [
     new webpack.ContextReplacementPlugin(
       // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
@@ -38,7 +38,7 @@ var commonConfig = {
       "windows.jQuery": "jquery",
       'window.$': 'jquery',
     })
-  ]
+  ]*/
 
 };
 
