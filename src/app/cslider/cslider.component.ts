@@ -12,9 +12,9 @@ export class CSlider {
   ngOnInit() {
     if (isBrowser) {
       $(require('../../../src/tools/jquery'));
-      $(require('../../../src/tools/modernizr'));
+      /*$(require('../../../src/tools/modernizr'));
       $(require('../../../src/tools/jquery.cslider'));
-      $(this._elRef.nativeElement).cslider();
+      $(this._elRef.nativeElement).cslider();*/
     }
   }
 }
