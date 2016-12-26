@@ -11,10 +11,10 @@ export class CSlider {
 
   ngOnInit() {
     if (isBrowser) {
-      $(require('./../../../tools/jquery-2.2.0.min.js'));
-      /*$(require('../../../src/tools/modernizr'));
-      $(require('../../../src/tools/jquery.cslider'));
-      $(this._elRef.nativeElement).cslider();*/
+      //$(require('./../../../tools/jquery-2.2.0.min.js'));
+      $(require('../../../tools/modernizr'));
+      //$(require('../../../src/tools/jquery.cslider'));
+      //$(this._elRef.nativeElement).cslider();
     }
   }
 }
