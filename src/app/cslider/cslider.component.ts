@@ -11,7 +11,7 @@ export class CSlider {
 
   ngOnInit() {
     if (isBrowser) {
-      $(require('../../../tools/jquery.js'));
+      $(require('./../../../tools/jquery.js'));
       /*$(require('../../../src/tools/modernizr'));
       $(require('../../../src/tools/jquery.cslider'));
       $(this._elRef.nativeElement).cslider();*/
