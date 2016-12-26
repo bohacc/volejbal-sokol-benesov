@@ -12,7 +12,7 @@ nohup.out
 
 .idea
 
-/dist/
+/dist/*
 
 files/*
 .htaccess*
