@@ -12,7 +12,8 @@ export class CSlider {
   ngOnInit() {
     if (isBrowser) {
       //$(require('./../../../tools/jquery-2.2.0.min.js'));
-      $(require('../../../tools/modernizr'));
+      let x = $('.test');
+      //$(require('../../../tools/modernizr'));
       //$(require('../../../src/tools/jquery.cslider'));
       //$(this._elRef.nativeElement).cslider();
     }
