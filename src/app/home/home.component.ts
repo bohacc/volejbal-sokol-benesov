@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
 })
 
 export class Home {
+  news: Array<Boolean> = [false, false, false];
 
+  showNewsAllItem(index) {
+    this.news[index] = true;
+  }
 }
