@@ -50,9 +50,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
-h1 {
-    margin: 10px;
-}
+
 p {
     padding: 10px;
     font-weight: 100;
