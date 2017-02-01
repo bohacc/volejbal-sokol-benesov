@@ -346,6 +346,26 @@
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
+              <small>28.01.2017</small>
+              <strong>Benešovští volejbalisté vybrali Zruč</strong>
+            </div>
+            <p>Zruč nad Sázavou – Ve 12. kole krajského volejbalového přeboru mužů si druhý Benešov zajistil plný počet bodů ve dvojutkání na palubovce šesté Zruče nad Sázavou.</p>
+            <p *ngIf="news[0]">
+              Jiskra Zruč nad Sázavou – TJ Sokol Benešov
+              1:3 (25, -20, -11, -23), 0:3 (-20, -19, -18)
+
+              Utkání byla jednoznačnou záležitostí Benešova, a to i přes vlažnější výkon v prvním setu prvního zápasu. Ve druhém duelu hosté předváděli pohledný volejbal s přesnou hrou v obraně i v útoku a zaslouženě zvítězili.
+
+              Benešov: Jo. Bartůšek, Ja. Bartůšek, Kočí, Hlavnička, Boháč, Lang, Kyselka, Řehák, Votruba, Čepl.
+
+              V sobotu 11. února hraje Benešov od 11 a 13 hodin dvojzápasy v hale ZŠ Jiráskova v Benešově proti lídrovi tabulky VK Tuchlovice A.
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(0)" *ngIf="!news[0]">celá zpráva...</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
               <small>14.01.2017</small>
               <strong>Volejbalisté Benešova potvrdili roli favorita</strong>
             </div>
@@ -382,6 +402,8 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(1)" *ngIf="!news[1]">celá zpráva...</a></p>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
@@ -404,8 +426,6 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(2)" *ngIf="!news[2]">celá zpráva...</a></p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
