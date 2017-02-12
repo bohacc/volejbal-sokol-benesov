@@ -346,6 +346,27 @@
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
+              <small>11.02.2017</small>
+              <strong>Benešovští volejbalisté si rozdělili body s lídrem soutěže</strong>
+            </div>
+            <p>V sobotu 11.2 pokračovala druhá polovina sezony krajského přeboru ve volejbale mužů. TJ Sokol Benešov sehrál další dvojutkání, tentokrát na domácí palubovce s prvním týmem v průběžném hodnocení soutěže VK Tuchlovice A.</p>
+            <p *ngIf="news[5]">
+              V prvním utkání v prvních dvou setech domácí nedokázali účinně vzdorovat soupeři, nicméně od třetího setu zpřesnili hru a přidali na tempu a pestrosti hry. O vítězi utkání pak rozhodovala zkrácená hra, kde oba týmy bojovali o každý míč a vítězství si celkem zaslouženě připsal domácí tým. Bohužel ve druhém utkání se domácím nepodařilo navázat na kvalitní výkon z prvního zápasu a tentokrát bral body hostující celek.
+
+              Aktuálně je tým z Benešova na třetím místě v celkovém hodnocení soutěže, nicméně má odehráno o dva zápasy méně než soupeři v tabulce před ním.
+
+              Další domácí utkání sehraje TJ Sokol Benešov 25.2.2017 od 13.00 hod ve sportovní hale ZŠ Jiráskova v Benešově v tradičním derby proti TJ Sokol Vlašim.
+
+              13. kolo, TJ Sokol Benešov – VK Tuchlovice A, 3:2 (-19, -11, 20, 13) , 0:3 (-17, -21, -20)
+
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, Ja. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J. Kyselka, P. Řehák, V. Votruba, M. Čepl, M. Kunc
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(5)" *ngIf="!news[5]">celá zpráva...</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
               <small>28.01.2017</small>
               <strong>Benešovští volejbalisté vybrali Zruč</strong>
             </div>
@@ -382,6 +403,8 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(3)" *ngIf="!news[3]">celá zpráva...</a></p>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
@@ -402,8 +425,6 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(2)" *ngIf="!news[2]">celá zpráva...</a></p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
