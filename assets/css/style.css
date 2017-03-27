@@ -938,3 +938,7 @@ p {
 .icons-licence {
   font-size: small;
 }
+
+.hide {
+  display: none;
+}

@@ -29,8 +29,29 @@
 </div>
 <!-- Start home section -->
 <div id="home">
+
+  <!--for server side-->
+  <div class="da-slider" *ngIf="isServer">
+    <div class="triangle"></div>
+    <!-- mask elemet use for masking background image -->
+    <div class="mask"></div>
+    <!-- All slides centred in container element -->
+    <div class="container">
+      <!-- Start first slide -->
+      <div class="da-slide da-slide-current">
+        <h2 class="fittext2">Aktuálně hrajeme</h2>
+        <h4>KP I. TŘÍDY MUŽŮ</h4>
+        <p>V sezóně 2016/2017 hrajeme soutěž ST-M1. Naším cílem v druhé polovině sezóny je podat vyrovnaný výkon a vyhrát soutěž.</p>
+        <a href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/header11.png" alt="Soutěž" width="320">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Start cSlider -->
-  <div id="da-slider" class="da-slider" cslider>
+  <div id="da-slider" class="da-slider" cslider [ngClass]="{hide: isServer}">
     <div class="triangle"></div>
     <!-- mask elemet use for masking background image -->
     <div class="mask"></div>

@@ -10,9 +10,12 @@ declare var $: any;
 
 export class Header {
   activate: Boolean;
+  isBrowser: Boolean;
+  isServer: Boolean;
 
   constructor (private _elRef: ElementRef) {
-
+    this.isBrowser = isBrowser;
+    this.isServer = !isBrowser;
   }
 
   ngOnInit() {
