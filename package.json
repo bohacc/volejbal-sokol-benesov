@@ -46,11 +46,9 @@
     "core-js": "2.4.1",
     "express": "4.15.2",
     "html-pdf": "^1.5.0",
-    "oracledb": "^1.10.1",
     "promise": "^7.1.1",
     "request": "^2.81.0",
     "rxjs": "5.2.0",
-    "shopify-node-api": "^1.8.0",
     "ts-metadata-helper": "0.0.4",
     "xml-js": "^1.0.2",
     "zone.js": "0.8.5"
