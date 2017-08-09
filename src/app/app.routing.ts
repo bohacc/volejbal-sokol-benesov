@@ -1,19 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 
-import { Home } from './home/home.component';
-import {AboutUs} from "./about-us/about-us.component";
-import {Statistics} from "./statistics/statistics.component";
-import {MatchSchedule} from "./match-schedule/match-schedule.component";
-import {Matches} from "./matches/matches.component";
-import {Players} from "./players/players.component";
-import {Contact} from "./contact/contact.component";
-import {Login} from "./login/login.component";
+import { Home } from './components/home/home.component';
+import {Login} from "./components/login/login.component";
 
 let title = 'Volejbal Sokol Benešov';
 
 const appRoutes: Routes = [
-  //{ path: '', redirectTo: 'homepage', pathMatch: 'full' },
   {path: '', component: Home, data: {title: title}},
 /*  {path: 'home', component: Home, data: {title: title}},
   {path: 'about-us', component: AboutUs, data: {title: title}},
@@ -30,4 +23,11 @@ export const appRoutingProviders: any[] = [
 
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(
+  appRoutes,
+  {
+    useHash: false,
+    preloadingStrategy: PreloadAllModules,
+    initialNavigation: 'enabled'
+  }
+);

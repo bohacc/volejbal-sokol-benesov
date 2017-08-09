@@ -1,11 +1,24 @@
-export var PATHS = {
-  CART: '/kosik',
-  LOGIN: '/login',
-  HOMEPAGE: '/homepage',
-};
+export var PORT = 9002;
+export var SHOPIFY_DOMAIN = 'myshopify.com';
+export var DB_PORT = 1521;
+export var DB_SERVER = 'sunee.notia.cz';
+export var CZECH_COUNTRY_CODE = 'CZ';
+export var AUT_COUNTRY_CODE = 'DE';
+export var NODEJS_APP_PATH = '/srv/nodejs/mcled_website_v3';
+export var APP_BACKEND_PATH = '/src/backend';
+export var commaParams = '@';
+export var COMMA = ',';
+export var COLON = ':';
+export var SPACE = ' ';
 export var SLASH = '/';
+export var QUERY = '?';
+export var EQUALS = '=';
+export var AT = '@';
 export var DOT = '.';
-export var FORMAT_NUMBER_1 = '1.0-0';
-export var FORMAT_NUMBER_2 = '1.1-2';
+export var DASH = '-';
+export var HASH = '#';
+export var AND = '&';
+export var JS_END = '\n';
 export var SESSIONID_CODE = 'sessionid';
 export var AUTH_TOKEN_CODE = 'auth_token';
+export var ROOT_PATH = 'http://localhost:' + (parseInt(process.env.APP_PORT, 10) || PORT);
