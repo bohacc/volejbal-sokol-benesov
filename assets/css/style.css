@@ -43,6 +43,12 @@ a:hover {
     text-decoration:none;
 }
 
+p a:hover {
+  color: #408AD2;
+  text-decoration:none;
+  font-weight: bold;
+}
+
 .info-mail a:hover {
   color: #FECE1A;
 }
@@ -941,4 +947,8 @@ p {
 
 .hide {
   display: none;
+}
+
+.slider-height {
+  min-height: 300px;
 }

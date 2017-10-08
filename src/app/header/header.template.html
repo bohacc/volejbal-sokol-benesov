@@ -31,7 +31,7 @@
 <div id="home">
 
   <!--for server side-->
-  <div class="da-slider" *ngIf="isServer">
+  <div class="da-slider slider-height" *ngIf="isServer">
     <div class="triangle"></div>
     <!-- mask elemet use for masking background image -->
     <div class="mask"></div>
@@ -39,9 +39,9 @@
     <div class="container">
       <!-- Start first slide -->
       <div class="da-slide da-slide-current">
-        <h2 class="fittext2">Aktuálně hrajeme</h2>
-        <h4>KP I. TŘÍDY MUŽŮ</h4>
-        <p>V sezóně 2016/2017 hrajeme soutěž ST-M1. Naším cílem v druhé polovině sezóny je podat vyrovnaný výkon a vyhrát soutěž.</p>
+        <h2 class="fittext2">Aktualita</h2>
+        <h4>7.10.2017</h4>
+        <p>Benešovští volejbalisté porazili Zruč a novou sezónu zahájili vítězně.</p>
         <a href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1" class="da-link button">Podrobnosti</a>
         <div class="da-img">
           <img src="/assets/img/header11x.png" alt="Soutěž" width="320">
@@ -56,7 +56,7 @@
   </div>
 
   <!-- Start cSlider -->
-  <div id="da-slider" class="da-slider" cslider [ngClass]="{hide: isServer}">
+  <div id="da-slider" class="da-slider slider-height" cslider [ngClass]="{hide: isServer}">
     <div class="triangle"></div>
     <!-- mask elemet use for masking background image -->
     <div class="mask"></div>
@@ -64,16 +64,30 @@
     <div class="container">
       <!-- Start first slide -->
       <div class="da-slide">
+        <h2>Aktualita</h2>
+        <h4>7.10.2017</h4>
+        <p>V sobotu 7.10. začala nová sezóna krajského přeboru ve volejbale mužů.
+
+          TJ Sokol Benešov sehrál úvodní dvojutkání na domácí palubovce s týmem TJ Jiskra Zruč nad Sázavou.
+        </p>
+        <a href="#news" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/header3x.png" width="520" alt="Aktualita">
+        </div>
+      </div>
+      <!-- End first slide -->
+      <!-- Start second slide -->
+      <div class="da-slide">
         <h2 class="fittext2">Aktuálně hrajeme</h2>
         <h4>KP I. TŘÍDY MUŽŮ</h4>
-        <p>V sezóně 2016/2017 hrajeme soutěž ST-M1. Naším cílem v druhé polovině sezóny je podat vyrovnaný výkon a vyhrát soutěž.</p>
+        <p>V sezóně 2017/2018 hrajeme soutěž ST-M1. Naším cílem v této sezóně je podat stabilnější výsledky než v minulé a vyhrát soutěž.</p>
         <a href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1" class="da-link button">Podrobnosti</a>
         <div class="da-img">
           <img src="/assets/img/header11x.png" alt="Soutěž" width="320">
         </div>
       </div>
-      <!-- End first slide -->
-      <!-- Start second slide -->
+      <!-- End second slide -->
+      <!-- Start third slide -->
       <div class="da-slide">
         <h2>Naši hráči</h2>
         <h4>Přidej se k nám</h4>
@@ -81,17 +95,6 @@
         <a href="#players" class="da-link button">Podrobnosti</a>
         <div class="da-img">
           <img src="/assets/img/header22x.png" width="520" alt="hráči">
-        </div>
-      </div>
-      <!-- End second slide -->
-      <!-- Start third slide -->
-      <div class="da-slide">
-        <h2>Aktualita</h2>
-        <h4>25.3.2017</h4>
-        <p>Benešovští volejbalisté porazili Dobřichovice a sezónu končí na druhém místě.</p>
-        <a href="#news" class="da-link button">Podrobnosti</a>
-        <div class="da-img">
-          <img src="/assets/img/header3x.png" width="520" alt="Aktualita">
         </div>
       </div>
       <!-- Start third slide -->
