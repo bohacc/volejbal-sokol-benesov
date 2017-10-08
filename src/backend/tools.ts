@@ -1,4 +1,5 @@
 var Constants = require('./constants');
+var convertXml = require('xml-js');
 
 export module Tools {
   export function getSingleResult(result) {
@@ -33,15 +34,42 @@ export module Tools {
     return result;
   }
 
-  export function validatePhone(value: string): Boolean {
+  export function validatePhone(value: string, language: string): Boolean {
     var re = /^(\+420)? ?[0-9]{3} ?[0-9]{3} ?[0-9]{3}$/,
       result = value ? re.test(value) : true;
+    if (language == 'DE') {
+      result = true;
+    }
     return result;
   }
 
-  export function validateZip(value: string): Boolean {
+  export function validateZip(value: string, language: string): Boolean {
     var re = /^[0-9]{3} ?[0-9]{2}$/,
       result = value ? re.test(value) : true;
+    if (language == 'DE') {
+      re = /^[0-9]{4,8}$/;
+      result = value ? re.test(value) : true;
+    }
+    return result;
+  }
+
+  export function validateRegId(value: string, language: string): Boolean {
+    var re = /^[0-9]{8}$/,
+      result = value ? re.test(value) : true;
+    if (language == 'DE') {
+      re = /^[0-9a-z]{4,8}$/;
+      result = value ? re.test(value) : true;
+    }
+    return result;
+  }
+
+  export function validateVatId(value: string, language: string): Boolean {
+    var re = /^[a-zA-Z0-9]{8,10}$/,
+      result = value ? re.test(value) : true;
+    if (language == 'DE') {
+      re = /^[a-zA-Z0-9]{10,12}$/;
+      result = value ? re.test(value) : true;
+    }
     return result;
   }
 
@@ -66,5 +94,129 @@ export module Tools {
     //res.cookies.set(name, {expire: new Date()});
     res.clearCookie(name);
   }
-}
 
+  export function setUpperCase(obj) {
+    for(let e in obj) {
+      if (obj.hasOwnProperty(e)) {
+        let exist = obj[e.toUpperCase()];
+        obj[e.toUpperCase()] = obj[e];
+        if (!exist) {
+          delete obj[e];
+        }
+      }
+    }
+  }
+
+  export function countryVersion (req, res, next) {
+    let hostname = req.headers.hostname || req.headers.host;
+    let url = ( hostname ? hostname.replace(/https:\/\//g, '').replace(/http:\/\//g, '') : '');
+    let czechVersion = Constants.COUNTRIES_VERSION.filter(function (el) {
+      return el.CODE === Constants.CZECH_COUNTRY_CODE;
+    })[0];
+    let cv = Constants.COUNTRIES_VERSION.filter(function (el) {
+      return el.URL === url.substr(0, el.URL.length);
+    })[0];
+
+    req.countryVersion = (cv && cv.CODE ? cv.CODE : czechVersion.CODE);
+    res.countryVersion = req.countryVersion;
+
+    next();
+  }
+
+  export function getDBLang (req: any) {
+    let code = req.countryVersion;
+    let lang = Constants.COUNTRIES_VERSION.filter(function (el){
+      return el.CODE === code;
+    });
+
+    return (lang && lang[0] ? lang[0].DB_LANG : Constants.COUNTRIES_VERSION[0].DB_LANG);
+  }
+
+  export function sortAsc (items, field) {
+    let arr = [], newArr = [], onlyNumber = false;
+    items.map(function (el) {
+      arr.push(el[field]);
+    });
+    onlyNumber = arr.every(function (el) {
+      return !isNaN(Number(String(el)));
+    });
+    if (onlyNumber) {
+      arr.sort(function (a, b) {
+        return a - b;
+      });
+    } else {
+      arr.sort();
+    }
+    arr.map(function (el) {
+      newArr.push(items.filter(function (el2) {
+        return el2[field] === el;
+      })[0]);
+    });
+    return newArr;
+  }
+
+  export function escapeRegExp (str) {
+    return str ? String(str).replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1") : str;
+  }
+
+  export function getLangConfig (req: any) {
+    let code = req.countryVersion;
+    let lang = Constants.COUNTRIES_VERSION.filter(function (el){
+      return el.CODE === code;
+    });
+
+    return (lang && lang[0] ? lang[0] : Constants.COUNTRIES_VERSION[0]);
+  }
+
+  export function roundTo (n, req): Number {
+    //let lang = getLangConfig(req);
+    //return Number(Number(n).toFixed(lang.numberDigitsRound));
+    return Number(n);
+  }
+
+  export function addToObjects (obj, add): void {
+    for (let key in add) {
+      obj[key] = add[key];
+    }
+  }
+
+  export function addPropsFromArr(rec: any, arr: Array<any>, pkRec: string, pkArr: string) {
+    arr.map(function (el) {
+      if (el[pkArr] == rec[pkRec]) {
+        for (let key in el) {
+          rec[key] = el[key];
+        }
+      }
+    });
+  }
+
+  export function sanitizeContentForInnerHtml(content: string, isBrowser: boolean): string {
+    let tmp = '';
+    const fceShowMoreStr =
+      '(function (self) {' +
+      '   var val = self.getAttribute(\'ngif\').replace(/\!/g, \'\'); ' +
+      '   self.setAttribute(\'class\', self.getAttribute(\'class\') + \' \' + \'hidden\'); ' +
+      '   document.querySelectorAll(\'[ngif=\' + val + \']\')' +
+      '     .forEach(function (el) {' +
+      '        el.classList.remove(\'hidden\')' +
+      '     });' +
+      '})(this);';
+    // *ngif => ngif
+    tmp = content.replace(/\*ngif/g, 'ngif');
+    tmp = tmp.replace(/\*ngIf/g, 'ngif');
+    // href with fragment
+    tmp = tmp.replace(/\[routerLink]="\['/g, 'href="');
+    tmp = tmp.replace(/']" *fragment="/g, '#');
+    tmp = tmp.replace(/'" *fragment="/g, '#');
+    // href without fragment
+    tmp = tmp.replace(/']"/g, '"');
+    // (click)
+    tmp = tmp.replace(/\(click\)=".*=true"/g, 'onclick="' + fceShowMoreStr + '"');
+    return tmp;
+  }
+
+  export function xml2js(xml: string): string {
+    let js = convertXml.xml2js(xml, {compact: true});
+    return js;
+  }
+}
