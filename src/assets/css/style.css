@@ -349,9 +349,9 @@ p {
  .section {
     padding-bottom: 50px;
 }
-.section .container {
+/*.section .container {
     padding-top:50px;
-}
+}*/
 .section .title {
     text-align: center;
     padding:10px;
