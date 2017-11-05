@@ -361,6 +361,27 @@
       </div>
       <div class="row">
         <div class="span4">
+            <div class="testimonial">
+                <div class="whopic">
+                  <small>4.11.2017</small>
+                  <strong>V sobotu 4.11. pokračoval čtvrtým kolem krajský přebor ve volejbale mužů.</strong>
+                </div>
+                <p>TJ Sokol Benešov zajížděl na další dvojutkání na palubovku tradičně silného soupeře TJ Sokol Roztoky u Prahy. </p>
+                <p *ngIf="news[14]">
+                    Již od úvodu prvního zápasu bylo zřejmé, že obě utkání nabídnou velmi kvalitní volejbal. Oba soupeři předváděli hru s velkým nasazením všech hráčů, což ocenili také diváci, kteří tentokrát dorazili v opravdu hojném počtu. Po celou dobu prvního utkání byly oba týmy velmi vyrovnané a zápas tak dospěl až do závěrečné zkrácené hry. V pátém setu benešovský tým předvedl koncentrovaný výkon a získal tak cenné body do celkového hodnocení soutěže.  
+                    
+                    Druhý zápas byl poznamenán hned v úvodním setu zraněním jednoho z hráčů benešovského týmu. Přestože do té doby měl hostující tým mírnou převahu, nepodařilo se tento set dotáhnout do vítězného konce. Všechny sety druhého zápasu byly velmi vyrovnané a rozhodovaly až těsné koncovky. Bohužel se štěstěna tentokrát přiklonila na stranu domácích a ve druhém utkání tak vyšel hostující tým bodově naprázdno se ziskem pouze jednoho setu. Oba zápasy nicméně ukázali, že benešovský tým je na sezonu velmi dobře připraven a předvedená hra je dobrým příslibem do dalších utkání se špičkou tabulky, které tým sehraje v listopadu.
+                     
+                    Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti VK Tuchlovice A v sobotu 11.11.2017 netradičně až od 17:00 a 19:00 hod. ve sportovní hala ZŠ Jiráskova.
+                    
+                    4. kolo, TJ Sokol Roztoky - TJ Sokol Benešov, 2:3 (-22, 16, 23, -21, -11) , 3:1 (20, -23, 26, 21)
+                    
+                    Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, J. Kyselka, P. Řehák, V. Votruba,  M. Janák, M. Lang                    
+                </p>
+                <p><a href="javascript:void(0);" (click)="showNewsAllItem(14)" *ngIf="!news[14]">celá zpráva...</a></p>
+              </div>
+        </div>
+        <div class="span4">
           <div class="testimonial">
             <div class="whopic">
               <small>21.10.2017</small>
@@ -407,6 +428,8 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(12)" *ngIf="!news[12]">celá zpráva...</a></p>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
