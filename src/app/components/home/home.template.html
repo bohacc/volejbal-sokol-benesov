@@ -363,20 +363,41 @@
         <div class="span4">
             <div class="testimonial">
                 <div class="whopic">
+                  <small>11.11.2017</small>
+                  <strong>Benešovští volejbalisté drží průběžné první místo v tabulce.</strong>
+                </div>
+                <p>V sobotu 11.11. pokračoval pátým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov sehrál další dvojutkání na domácí palubovce s tradičně silným soupeřem VK Tuchlovice A, tentokrát netradičně ve večerních hodinách. </p>
+                <p *ngIf="news[15]">
+                  Oba zápasy byly plně v režii domácího týmu a i přes drobná zaváhání zejména v úvodu některých setů nedostal hostující tým mnoho příležitostí průběh hry výrazněji zdramatizovat. Ve všech setech domácí volejbalisté předvedli koncentrovaný výkon a vyvarovali se také většího počtu nevynucených chyb. Výjimkou byl druhý set druhého zápasu, kdy benešovský tým i přes slibně rozehranou koncovku nedokázal ani přes několik pokusů úspěšně zaútočit a zakončit tak tento set vítězně. Obě utkání domácí odehráli v základní sestavě, pouze s jedním krátkým střídáním. Benešovský tým i nadále trápí početná marodka.
+
+                  Po pěti odehraných kolech soutěže vedou benešovští volejbalisté průběžnou tabulku soutěže. Utkání s týmem z Tuchlovic bylo také první letošní konfrontací s týmem s nejvyššími ambicemi. V dalších dvou kolech sehrají benešovští volejbalisté velmi důležitá utkání s týmem z Dobříše, loňským účastníkem národní ligy a také s rezervním týmem extraligového Kladna, který má sestavu nabitou hráči z nejvyšší soutěže.
+
+                  Příští dvojzápas sehraje tým z Benešova na palubovce týmu z Dobříše v sobotu 18.11.2017 od 10:00 hod.
+
+                  5. kolo, TJ Sokol Benešov – VK Tuchlovice A, 3:0 (22, 13, 15) , 3:1 (15, -19, 18, 19)
+
+                  Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P. Řehák, V. Votruba,  M. Janák, M. Lang
+                </p>
+                <p><a href="javascript:void(0);" (click)="showNewsAllItem(15)" *ngIf="!news[15]">celá zpráva...</a></p>
+              </div>
+        </div>
+        <div class="span4">
+            <div class="testimonial">
+                <div class="whopic">
                   <small>4.11.2017</small>
                   <strong>V sobotu 4.11. pokračoval čtvrtým kolem krajský přebor ve volejbale mužů.</strong>
                 </div>
                 <p>TJ Sokol Benešov zajížděl na další dvojutkání na palubovku tradičně silného soupeře TJ Sokol Roztoky u Prahy. </p>
                 <p *ngIf="news[14]">
-                    Již od úvodu prvního zápasu bylo zřejmé, že obě utkání nabídnou velmi kvalitní volejbal. Oba soupeři předváděli hru s velkým nasazením všech hráčů, což ocenili také diváci, kteří tentokrát dorazili v opravdu hojném počtu. Po celou dobu prvního utkání byly oba týmy velmi vyrovnané a zápas tak dospěl až do závěrečné zkrácené hry. V pátém setu benešovský tým předvedl koncentrovaný výkon a získal tak cenné body do celkového hodnocení soutěže.  
-                    
+                    Již od úvodu prvního zápasu bylo zřejmé, že obě utkání nabídnou velmi kvalitní volejbal. Oba soupeři předváděli hru s velkým nasazením všech hráčů, což ocenili také diváci, kteří tentokrát dorazili v opravdu hojném počtu. Po celou dobu prvního utkání byly oba týmy velmi vyrovnané a zápas tak dospěl až do závěrečné zkrácené hry. V pátém setu benešovský tým předvedl koncentrovaný výkon a získal tak cenné body do celkového hodnocení soutěže.
+
                     Druhý zápas byl poznamenán hned v úvodním setu zraněním jednoho z hráčů benešovského týmu. Přestože do té doby měl hostující tým mírnou převahu, nepodařilo se tento set dotáhnout do vítězného konce. Všechny sety druhého zápasu byly velmi vyrovnané a rozhodovaly až těsné koncovky. Bohužel se štěstěna tentokrát přiklonila na stranu domácích a ve druhém utkání tak vyšel hostující tým bodově naprázdno se ziskem pouze jednoho setu. Oba zápasy nicméně ukázali, že benešovský tým je na sezonu velmi dobře připraven a předvedená hra je dobrým příslibem do dalších utkání se špičkou tabulky, které tým sehraje v listopadu.
-                     
+
                     Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti VK Tuchlovice A v sobotu 11.11.2017 netradičně až od 17:00 a 19:00 hod. ve sportovní hala ZŠ Jiráskova.
-                    
+
                     4. kolo, TJ Sokol Roztoky - TJ Sokol Benešov, 2:3 (-22, 16, 23, -21, -11) , 3:1 (20, -23, 26, 21)
-                    
-                    Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, J. Kyselka, P. Řehák, V. Votruba,  M. Janák, M. Lang                    
+
+                    Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, J. Kyselka, P. Řehák, V. Votruba,  M. Janák, M. Lang
                 </p>
                 <p><a href="javascript:void(0);" (click)="showNewsAllItem(14)" *ngIf="!news[14]">celá zpráva...</a></p>
               </div>
@@ -403,6 +424,8 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(13)" *ngIf="!news[13]">celá zpráva...</a></p>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
@@ -428,8 +451,6 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(12)" *ngIf="!news[12]">celá zpráva...</a></p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
