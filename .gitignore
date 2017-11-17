@@ -18,3 +18,5 @@ files/*
 .htaccess*
 
 .DS_Store
+
+/functions/node_modules
